@@ -1,49 +1,86 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import '@fontsource/itim'
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to
-				<a href="https://docs.astro.build/">read the docs</a>
-				or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out
-				<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-				by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <style>
+      .intro > * {
+        gap: 0;
+        padding: 0;
+        margin: 0;
+      }
+
+	  .name{
+		font-family:'Itim'
+	  }
+
+	  ul {
+    padding-left: 0; /* Remove left padding from the list */
+	list-style: none;
+  }
+
+  li {
+    list-style-position: inside; /* Optional: Adjust bullet alignment */
+  }
+
+	  @media (max-width: 768px) {
+    .name {
+      font-size: 2.5em; /* Adjust font size for h3 equivalent */
+    }
+  }
+
+  img{
+	text-align: center;
+	
+  }
+
+  .image_container{
+	
+	display: flex;
+	justify-content: center;
+  }
+
+    </style>
+  </head>
+  <body>
+    <Header />
+	
+    <main>
+		
+      <div class="intro">
+        <h1 class="name">Nikhil Simon Toppo</h1>
+        <p>Currently pursuing decent grades</p>
+        <p>Stuck with Goofy</p>
+      </div>
+      <hr style="height: 2px; background-color: gray; border: none;" />
+
+      <p>
+        I prefer simple solutions to problems. The goal is to keep it minimal
+        and easy to maintain. Macros are my life line. I prefer designing over
+        other stuff. I have plenty of experience with Javascript/Typescript.
+        Proficient in frameworks like React and Express. I also handle IT/Server
+        related issues regularly over several microservices such as EC2, GCE. I
+        am good at convincing....and also getting convinced.
+      </p>
+	  <h2>OSS</h2>
+	  <ul>
+		<li>LinkedSearch</li>
+		<li>News & Publications Society</li>
+		<li>Tethered</li>
+		<li>Pokedex</li>
+		<li>Starway</li>
+	  </ul>
+	  <div class="image_container">
+		<img src="cat2.png" alt="" srcset="">
+	  </div>
+    </main>
+    <Footer />
+  </body>
 </html>
