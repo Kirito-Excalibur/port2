@@ -1,16 +1,15 @@
 ---
-import Layout from '../layouts/BlogPost.astro';
-import Nikki from '../assets/nikki.jpeg';
+import Layout from "../layouts/BlogPost.astro";
+import Nikki from "../assets/nikki.jpeg";
+
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import "@fontsource/itim";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 ---
 
-<Layout
-	title="Single Line Description"
-	description="Lorem ipsum dolor sit amet"
-	pubDate={new Date('October 05 2025')}
-	heroImage={Nikki}
->
-
+<head>
+	<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+</head>
+<Header />
 <h3>Truly Selfish....just like a cat</h3>
-
-
-</Layout>
